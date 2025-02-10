@@ -15,4 +15,7 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
+      - name: Check if there is make and gcc
+        run: |
+          which make && which gcc
       - run: echo "🍏 This job's status is ${{ job.status }}."
